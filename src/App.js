@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from "react";
 import CocktailSelect from './components/CocktailSelect';
+import CocktailsList from './components/CocktailsList';
 
 function App() {
   const [selectedCocktail, setSelectedCocktail] = useState(null);
@@ -33,6 +34,7 @@ function App() {
     <div className="App">
       Your Cocktail
       <CocktailSelect cocktailSelection={cocktailSelection} selectedCocktail={selectedCocktail} setSelectedCocktail={selectedCocktail}/>
+      {cocktailsData && <CocktailsList cocktailsData={cocktailsData}/>}
     </div>
   );
 }

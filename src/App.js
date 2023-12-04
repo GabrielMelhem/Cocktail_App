@@ -4,9 +4,9 @@ import CocktailSelect from './components/CocktailSelect';
 
 function App() {
   const [selectedCocktail, setSelectedCocktail] = useState(null);
-  const [cocktailData, setCocktailData] = useState(null);
+  const [cocktailsData, setCocktailsData] = useState(null);
 
-  const fetchCocktail= async (cocktailName) => {
+  const fetchCocktails= async (cocktailName) => {
     console.log("selectedCocktail",selectedCocktail)
     try {
       const response = await fetch(
@@ -15,8 +15,8 @@ function App() {
       );
       const data = await response.json();
       console.log("Get Data", data);
-      setCocktailData(data);
-      console.log("CocktailData", cocktailData)
+      setCocktailsData(data);
+      console.log("CocktailsData", cocktailsData)
     } catch (error) {
       console.log("error", error);
     }
@@ -26,7 +26,7 @@ function App() {
   const cocktailSelection = (e) => {
     e.preventDefault();
     setSelectedCocktail(e.target.value);
-    fetchCocktail(selectedCocktail);
+    fetchCocktails(selectedCocktail);
   }
 
   return (

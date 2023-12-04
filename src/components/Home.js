@@ -4,8 +4,7 @@ import CocktailsList from './CocktailsList';
 
 
 import About from './About';
-import Footer from './Footer';
-import SocialMedia from './SocialMedia';
+import Footer from './Footer/Footer';
 
 function Home() {
   const [selectedCocktail, setSelectedCocktail] = useState(null);
@@ -42,7 +41,6 @@ function Home() {
       {cocktailsData && <CocktailsList cocktailsData={cocktailsData}/>}
 
       <About />
-      <SocialMedia />
       <Footer />
     </div>
   );

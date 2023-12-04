@@ -15,7 +15,7 @@ function App() {
       );
       const data = await response.json();
       console.log("Get Data", data);
-      setCocktailData(data.drinks);
+      setCocktailData(data);
       console.log("CocktailData", cocktailData)
     } catch (error) {
       console.log("error", error);

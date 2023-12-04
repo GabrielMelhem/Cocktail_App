@@ -9,7 +9,7 @@ function CocktailSelect({cocktailSelection,selectedCocktail,setSelectedCocktail}
           placeholder="Search for a Cocktail"
           id="cocktailInput"
           value={selectedCocktail}
-          onChange={(e)=>setSelectedCocktail(e.target.value)}
+          onChange={setSelectedCocktail}
         />
         <button>search</button>
       </form>

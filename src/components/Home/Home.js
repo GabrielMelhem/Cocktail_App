@@ -6,6 +6,7 @@ import {HomeSection,HomeInformation,HomeTitle,HomeDesc,HomeBtn} from './style.js
 
 import About from "../About";
 import Footer from "../Footer/Footer";
+import CocktailCategory from "../CocktailCategory/CocktailCategory.js";
 
 function Home() {
   const [selectedCocktail, setSelectedCocktail] = useState(null);
@@ -43,12 +44,13 @@ function Home() {
             <HomeDesc>
               Your Cocktail provide you Drinks and Cocktail around the World. 
             </HomeDesc>
-            <HomeBtn>Let's Begin</HomeBtn>
+            <HomeBtn>Let's Begain</HomeBtn>
           </HomeInformation>
         </div>
       </HomeSection>
+
+      <CocktailCategory />
       <div>
-        
         <CocktailSelect
           cocktailSelection={cocktailSelection}
           selectedCocktail={selectedCocktail}

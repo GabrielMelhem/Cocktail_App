@@ -1,5 +1,6 @@
+import { useState } from 'react';
 
-import {HomeSection,HomeInformation,HomeTitle,HomeDesc,HomeBtn} from './style.js'
+import { HomeSection, HomeInformation, HomeTitle, HomeDesc, HomeBtn } from './style.js'
 
 import About from "../About";
 import Footer from "../Footer/Footer";
@@ -7,6 +8,7 @@ import CocktailCategory from "../CocktailCategory/CocktailCategory.js";
 import CocktailsByCategory from "../CocktailsByCategory.js";
 
 function Home() {
+  //const [category, setCategory]=useState('Alcoholic')
   return (
     <>
       <HomeSection>
@@ -23,7 +25,8 @@ function Home() {
 
       <CocktailCategory />
       <div>
-        <CocktailsByCategory cocktailsCategory='Alcoholic'/>
+        {/* <CocktailsByCategory cocktailsCategory={category} /> */}
+        
         <About />
         <Footer />
       </div>

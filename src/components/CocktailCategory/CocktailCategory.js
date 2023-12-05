@@ -1,4 +1,5 @@
 import React from "react";
+import { Link} from 'react-router-dom';
 
 import {
   CategorySection,
@@ -18,7 +19,7 @@ function CocktailCategory() {
           <Span>Cocktail</Span> Category
         </CategoryTitle>
         <CategoryPart first="1">
-          <PartTitle>Alcoholic</PartTitle>
+          <PartTitle><Link to="/Alcoholic">AlCoholic</Link></PartTitle>
           <PartLine />
           <PartDesc>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
@@ -27,7 +28,7 @@ function CocktailCategory() {
         </CategoryPart>
 
         <CategoryPart>
-          <PartTitle>Non_Alcoholic</PartTitle>
+          <PartTitle><Link to="/Non_Alcoholic">Non_AlCoholic</Link></PartTitle>
           <PartLine />
           <PartDesc>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus

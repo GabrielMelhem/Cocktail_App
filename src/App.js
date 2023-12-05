@@ -5,6 +5,8 @@ import  Navbar  from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Contact from './pages/Contact/Contact';
 import About from './components/About';
+import NonAlcoholic from './pages/NonAlcoholic';
+import Alcoholic from "./pages/Alcoholic";
 
 function App() {
  
@@ -15,6 +17,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/Alcoholic' element={<Alcoholic />} />
+        <Route path='/Non_Alcoholic' element={<NonAlcoholic />} />
       </Routes>
     </BrowserRouter>
   );

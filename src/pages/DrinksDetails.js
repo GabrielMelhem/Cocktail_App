@@ -1,5 +1,5 @@
 import React, { useState ,useEffect,useParams} from 'react'
-import ListGroup from 'react-bootstrap/ListGroup';
+import Stack from 'react-bootstrap/Stack';
 
 const DrinksDetails = () => {
   const [details,setDetails]=useState([]);
@@ -30,12 +30,12 @@ const DrinksDetails = () => {
       {details &&
         details.map((detail) => {
           return (
-            <ListGroup key={detail.idDrink}>
-              <ListGroup.Item>Name: {detail.strDrink}</ListGroup.Item>
-              <ListGroup.Item>Instructions: {detail.strInstructions}</ListGroup.Item>
-              <ListGroup.Item>strIngredients: {detail.strIngredient1} {detail.strIngredient2} {detail.strIngredient3}</ListGroup.Item>
-              <ListGroup.Item>Measure: {detail.strMeasure1} {detail.strMeasure2} {detail.strMeasure3}</ListGroup.Item>
-            </ListGroup>
+            <Stack key={detail.idDrink} >
+              <div>Name: {detail.strDrink}</div>
+              <div>Instructions: {detail.strInstructions}</div>
+              <div>strIngredients: {detail.strIngredient1} {detail.strIngredient2} {detail.strIngredient3}</div>
+              <div>Measure: {detail.strMeasure1} {detail.strMeasure2} {detail.strMeasure3}</div>
+            </Stack>
           );
         // <p key={detail.idDrink}>{detail.strInstructions}</p>;
         })}

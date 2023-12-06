@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeSection = styled.div`
-    height: 500px;
+    height: 1000px;
     background: url('images/home12.jpg');
     background-size: cover;
     background-position: center;

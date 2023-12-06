@@ -12,6 +12,7 @@ import About from "../About";
 import Footer from "../Footer/Footer";
 import CocktailCategory from "../CocktailCategory/CocktailCategory.js";
 import CocktailInput from "../CocktailInput.js";
+import SocialMedia from "../SocialMedia/SocialMedia.js";
 
 function Home() {
   const [selectedCocktail, setSelectedCocktail] = useState(null);
@@ -62,6 +63,7 @@ function Home() {
           setSelectedCocktail={setSelectedCocktail}
         />
         <About />
+        {/* <SocialMedia /> */}
         <Footer />
       </div>
     </>

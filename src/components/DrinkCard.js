@@ -7,8 +7,7 @@ const DrinkCard = (drink) => {
   const [isClicked,setIsClicked]=useState(false);
   
   const handleBtnClick =()=>{
-    setIsClicked(true);
-    
+    setIsClicked(true);    
   }
   return (
     <Card style={{ width: "18rem" }}>
@@ -22,6 +21,7 @@ const DrinkCard = (drink) => {
         <Button variant="primary" onClick={handleBtnClick}>Go somewhere</Button>
         {/* {isClicked && <DrinksDetails idDrink={drink.drink.idDrink}/>} */}
         {isClicked && <Link to="/DrinksDetails">DrinksDetails</Link>}
+        {/* {isClicked && <Link to="/DrinksDetails" params={{idDrinkParameter: drink.drink.idDrink}}>DrinksDetails</Link>} */}
       </Card.Body>
     </Card>
   );

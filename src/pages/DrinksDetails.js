@@ -1,8 +1,10 @@
-import React, { useState ,useEffect} from 'react'
+import React, { useState ,useEffect,useParams} from 'react'
 import ListGroup from 'react-bootstrap/ListGroup';
 
 const DrinksDetails = () => {
   const [details,setDetails]=useState([]);
+  // const idDrinkParameter = useParams();
+  // console.log('idDrinkParameter: ', idDrinkParameter);
 
   const fetchDrinkDetails = async () => {
     try {

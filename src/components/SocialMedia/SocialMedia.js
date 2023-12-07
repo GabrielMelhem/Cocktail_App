@@ -28,9 +28,9 @@ const SocialMedia = () => {
     getSocialData();
   }, []);
 
-  const socialList = socialData.map((socialItem)=>{
+  const socialList = socialData.social.map((socialItem)=>{
     return (
-        <Social>
+        <Social item={socialItem.id} key={socialItem.id}>
         <Icon className={socialItem.Icon}></Icon>
         <SocialDesc>
           <Span>{socialItem.title}</Span>

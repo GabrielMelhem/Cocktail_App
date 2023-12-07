@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 import {
   HomeSection,
@@ -8,36 +7,14 @@ import {
   HomeBtn,
 } from "./style.js";
 
+import CocktailCategory from "../CocktailCategory/CocktailCategory.js";
+import CocktailsByName from "../CocktailsByName.js";
+import SocialMedia from "../SocialMedia/SocialMedia.js";
 import About from "../About";
 import Footer from "../Footer/Footer";
-import CocktailCategory from "../CocktailCategory/CocktailCategory.js";
-import CocktailInput from "../CocktailInput.js";
-import SocialMedia from "../SocialMedia/SocialMedia.js";
 
 function Home() {
-  const [selectedCocktail, setSelectedCocktail] = useState(null);
-  const [cocktailData, setCocktailData] = useState([]);
-
-  const fetchCocktailByName = async (cocktailName) => {
-    try {
-      const response = await fetch(
-        `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailName}`
-      );
-      const data = await response.json();
-      console.log("Get Data", data);
-      setCocktailData(data.drinks);
-      console.log("cocktail Data", cocktailData);
-    } catch (error) {
-      console.log("error", error);
-    }
-  };
-
-  const cocktailSelection = (e) => {
-    e.preventDefault();
-    setSelectedCocktail(e.target.value);
-    fetchCocktailByName(selectedCocktail);
-    console.log("cocktail selected", selectedCocktail);
-  };
+  
 
   return (
     <>
@@ -53,19 +30,17 @@ function Home() {
         </div>
       </HomeSection>
 
-      <div>
+      <div className="categorySection">
         <CocktailCategory />
       </div>
-      <div>
-        <CocktailInput
-          cocktailSelection={cocktailSelection}
-          selectedCocktail={selectedCocktail}
-          setSelectedCocktail={setSelectedCocktail}
-        />
-        <About />
-        {/* <SocialMedia /> */}
-        <Footer />
+
+      <div className="cocktailByNameSection">
+        <CocktailsByName />
       </div>
+
+      <About />
+      {/* <SocialMedia /> */}
+      <Footer />
     </>
   );
 }

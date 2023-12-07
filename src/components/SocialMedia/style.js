@@ -5,7 +5,7 @@ export const SocialMediaSection = styled.div`
     overflow: hidden;
 `
 
-export const Social =styled.div`
+export const SocialDiv =styled.div`
     width: 33.33%;
     float: left;
     box-sizing: border-box;

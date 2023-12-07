@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+
 const DrinkCard = (drink) => {
   return (
     <div className="drinkCard">
@@ -12,10 +13,10 @@ const DrinkCard = (drink) => {
           src={drink.drink.strDrinkThumb}
         />
         <Card.Body>
-          <Card.Title>{drink.drink.strDrink}</Card.Title>
+          {/* <Card.Title >{drink.drink.strDrink}</Card.Title> */}
           <Button variant="primary">
             {
-              <Link to={`/DrinksDetails/${drink.drink.idDrink}`}>
+              <Link style={{color: "#fff", textDecoration: 'none'}} to={`/DrinksDetails/${drink.drink.idDrink}`}>
                 {drink.drink.strDrink}
               </Link>
             }

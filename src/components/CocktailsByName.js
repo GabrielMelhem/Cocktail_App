@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import CocktailInput from "./CocktailInput.js";
 import DrinkCard from '../components/DrinkCard/DrinkCard';
 
@@ -20,10 +20,6 @@ const CocktailsByName = () => {
       console.log("error", error);
     }
   };
-
-  // useEffect(() => {
-  //   fetchCocktailByName(selectedCocktail);
-  // }, []);
 
   const cocktailSelection = (e) => {
     e.preventDefault();

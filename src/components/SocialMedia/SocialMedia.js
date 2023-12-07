@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   SocialMediaSection,
-  Social,
+  SocialDiv,
   Icon,
   SocialDesc,
   Span,
@@ -17,8 +17,7 @@ const SocialMedia = () => {
       axios
         .get("js/data.json")
         .then((response) => setSocialData(response.data.social));
-
-        console.log('socialData',socialData)
+      console.log("socialData", socialData);
     } catch (error) {
       console.log("error", error);
     }
@@ -28,23 +27,19 @@ const SocialMedia = () => {
     getSocialData();
   }, []);
 
-  const socialList = socialData.social.map((socialItem)=>{
+  const socialList = socialData.social.map((socialItem) => {
     return (
-        <Social item={socialItem.id} key={socialItem.id}>
+      <SocialDiv item={socialItem.id} key={socialItem.id}>
         <Icon className={socialItem.Icon}></Icon>
         <SocialDesc>
           <Span>{socialItem.title}</Span>
           <SpanInfo> {socialItem.body}</SpanInfo>
         </SocialDesc>
-      </Social>
-    )
-  })
+      </SocialDiv>
+    );
+  });
 
-  return (
-    <SocialMediaSection>
-      {socialList}
-    </SocialMediaSection>
-  );
+  return <SocialMediaSection>{socialList}</SocialMediaSection>;
 };
 
 export default SocialMedia;

@@ -1,4 +1,3 @@
-
 import {
   HomeSection,
   HomeInformation,
@@ -9,7 +8,6 @@ import {
 
 import CocktailCategory from "../CocktailCategory/CocktailCategory.js";
 import CocktailsByName from "../CocktailsByName.js";
-import SocialMedia from "../SocialMedia/SocialMedia.js";
 import About from "../About";
 import Footer from "../Footer/Footer";
 

@@ -14,8 +14,8 @@ const Navbar =()=> {
             <UlList>
                 <ListItem><Link to='/'>Home</Link></ListItem>
                 <ListItem><Anchor to='/about'>About</Anchor></ListItem>
-                <ListItem><Anchor to='/Alcoholic'>Alcoholic</Anchor></ListItem>
-                <ListItem><Anchor to='/Non_Alcoholic'>Non_Alcoholic</Anchor></ListItem>
+                <ListItem><Link to='/Alcoholic'>Alcoholic</Link></ListItem>
+                <ListItem><Link to='/Non_Alcoholic'>Non_Alcoholic</Link></ListItem>
                 <ListItem><Link to='/contact'>contact</Link></ListItem>
             </UlList>
         </div>

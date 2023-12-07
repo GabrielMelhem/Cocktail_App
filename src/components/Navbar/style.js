@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const NavbarSection = styled.div`
     padding: 5px 0;
     overflow: hidden;
-    background: #fff;
+    background: '#fff';
     position: relative;
     border-bottom: 1px solid #000
 `

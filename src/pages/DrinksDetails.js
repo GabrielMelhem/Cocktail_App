@@ -1,15 +1,16 @@
-import React, { useState ,useEffect,useParams} from 'react'
+import React, { useState ,useEffect } from 'react'
 import Stack from 'react-bootstrap/Stack';
+import { useParams } from 'react-router-dom';
 
 const DrinksDetails = () => {
   const [details,setDetails]=useState([]);
-  // const idDrinkParameter = useParams();
-  // console.log('idDrinkParameter: ', idDrinkParameter);
+  const {idDrink} = useParams();
+  console.log('idDrinkParameter: ', idDrink);
 
   const fetchDrinkDetails = async () => {
     try {
       const response = await fetch(
-        `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=14610`
+        `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idDrink}`
       );
 
       const data = await response.json();
@@ -37,7 +38,6 @@ const DrinksDetails = () => {
               <div>Measure: {detail.strMeasure1} {detail.strMeasure2} {detail.strMeasure3}</div>
             </Stack>
           );
-        // <p key={detail.idDrink}>{detail.strInstructions}</p>;
         })}
     </div>
   )

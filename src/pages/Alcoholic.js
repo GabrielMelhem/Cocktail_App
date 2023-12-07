@@ -8,8 +8,6 @@ function Alcoholic() {
   const urlCategory = location.pathname.slice(1);
   console.log("urlCategory", urlCategory);
   const [category, setCategory] = useState(urlCategory);
-  // const urlParameter = useParams();
-  // console.log('urlParameter :>> ', urlParameter);
   console.log("location :>> ", location.pathname);
   const [drinks, setDrinks] = useState([]);
 

@@ -20,7 +20,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/Alcoholic' element={<Alcoholic />} />
         <Route path='/Non_Alcoholic' element={<NonAlcoholic />} />
-        <Route path='/DrinksDetails' element={<DrinksDetails />} />
+        <Route path='/DrinksDetails/:idDrink' element={<DrinksDetails />} />
       </Routes>
     </BrowserRouter>
   );

@@ -8,6 +8,7 @@ import About from './components/About';
 import NonAlcoholic from './pages/NonAlcoholic';
 import Alcoholic from "./pages/Alcoholic";
 import DrinksDetails from "./pages/DrinksDetails";
+import CocktailsByLetter from './components/CocktailsByLetter';
 
 function App() {
  
@@ -21,6 +22,7 @@ function App() {
         <Route path='/Alcoholic' element={<Alcoholic />} />
         <Route path='/Non_Alcoholic' element={<NonAlcoholic />} />
         <Route path='/DrinksDetails/:idDrink' element={<DrinksDetails />} />
+        <Route path='/CocktailsByLetter/:selectedLetter' element={<CocktailsByLetter />} />
       </Routes>
     </BrowserRouter>
   );

@@ -26,36 +26,36 @@ const Navbar = () => {
                 <ListItem><Link to='/contact'>contact</Link></ListItem>
             </UlList> */}
 
-        <div class="nav-wrapper">
-          <div class="grad-bar"></div>
-          <nav class="navbar">
+        <div className="nav-wrapper">
+          <div className="grad-bar"></div>
+          <nav className="navbar">
             <img
               src=""
               alt="Company Logo"
             />
-            <div class="menu-toggle" id="mobile-menu">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
+            <div className="menu-toggle" id="mobile-menu">
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
             </div>
-            <ul class="nav no-search">
-              <li class="nav-item">
+            <ul className="nav no-search">
+              <li className="nav-item">
                 <a href="#">Home</a>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a href="#">About</a>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a href="#">Work</a>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a href="#">Careers</a>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a href="#">Contact Us</a>
               </li>
-              <i class="fas fa-search" id="search-icon"></i>
-              <input class="search-input" type="text" placeholder="Search.." />
+              <i className="fas fa-search" id="search-icon"></i>
+              <input className="search-input" type="text" placeholder="Search.." />
             </ul>
           </nav>
         </div>

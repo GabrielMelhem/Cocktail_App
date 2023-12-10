@@ -11,6 +11,7 @@ import CocktailsByName from "../CocktailsByName.js";
 import About from "../About";
 import Footer from "../Footer/Footer";
 import Carousel from 'react-bootstrap/Carousel';
+import CocktailLetter from "../CocktailLetter.js";
 
 function Home() {
   
@@ -75,6 +76,10 @@ function Home() {
 
       <div className="cocktailByNameSection">
         <CocktailsByName />
+      </div>
+
+      <div className="cocktailLetterSection">
+        <CocktailLetter />
       </div>
 
       <About />

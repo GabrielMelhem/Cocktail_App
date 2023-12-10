@@ -1,16 +1,19 @@
 import React from 'react'
 import { useState } from "react";
-import CocktailInput from "./CocktailInput.js";
+import { useParams } from 'react-router-dom';
 import DrinkCard from '../components/DrinkCard/DrinkCard';
+import CocktailLetter from './CocktailLetter.js';
 
 const CocktailsByLetter = () => {
-  const [selectedLetter, setSelectedLetter] = useState(null);
+  
   const [cocktailsData, setCocktailsData] = useState([]);
+  const {selectedLetter} = useParams();
+  console.log('selectedLetter: ', selectedLetter);
 
   const fetchCocktailByLetter = async (letter) => {
     try {
       const response = await fetch(
-        `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`
+        `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${selectedLetter}`
       );
       const data = await response.json();
       console.log("Get Data", data.drinks);
@@ -21,12 +24,11 @@ const CocktailsByLetter = () => {
     }
   };
 
-  const letterSelection = () => {
-    
-  };
+  
 
   return (
     <div>CocktailsByLetter
+    
       {cocktailsData &&
         cocktailsData.map((drink) => {
           return <li key={drink.idDrink}>{<DrinkCard drink={drink} />}</li>;

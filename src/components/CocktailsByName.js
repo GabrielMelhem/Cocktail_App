@@ -4,7 +4,7 @@ import CocktailInput from "./CocktailInput.js";
 import DrinkCard from '../components/DrinkCard/DrinkCard';
 
 const CocktailsByName = () => {
-  const [selectedCocktail, setSelectedCocktail] = useState(null);
+  const [selectedCocktail, setSelectedCocktail] = useState('');
   const [cocktailData, setCocktailData] = useState([]);
 
   const fetchCocktailByName = async (cocktailName) => {

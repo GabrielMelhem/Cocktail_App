@@ -1,11 +1,175 @@
-import React from 'react'
+import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const CocktailLetter = () => {
-  return (
-    <div>Browse Your Favorite Cocktails By Letter: 
-        
-    </div>
-  )
-}
+  const [selectedLetter, setSelectedLetter] = useState(null);
 
-export default CocktailLetter
+  const letterSelection = (e) => {
+    setSelectedLetter(e.target.textContent);
+    console.log("selectedLetter", selectedLetter);
+  };
+  return (
+    <div>
+      Browse Your Favorite Cocktails By pressing a Letter:
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        A
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        B
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        C
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        D
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        E
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        F
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        G
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        H
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        I
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        J
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        K
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        L
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        M
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        N
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        O
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        P
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        Q
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        R
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        S
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        T
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        U
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        V
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        W
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        X
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        Y
+      </Link>
+      <Link
+        to={`/CocktailsByLetter/${selectedLetter}`}
+        onClick={letterSelection}
+      >
+        Z
+      </Link>
+    </div>
+  );
+};
+
+export default CocktailLetter;

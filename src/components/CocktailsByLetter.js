@@ -1,8 +1,7 @@
 import React from 'react'
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import DrinkCard from '../components/DrinkCard/DrinkCard';
-import CocktailLetter from './CocktailLetter.js';
 
 const CocktailsByLetter = () => {
   
@@ -24,14 +23,16 @@ const CocktailsByLetter = () => {
     }
   };
 
-  
+  useEffect(() => {
+    fetchCocktailByLetter();
+  }, []);
 
   return (
     <div>CocktailsByLetter
     
       {cocktailsData &&
         cocktailsData.map((drink) => {
-          return <li key={drink.idDrink}>{<DrinkCard drink={drink} />}</li>;
+          return <p key={drink.idDrink} style={{display: 'inline-flex', padding:'40px'}}>{<DrinkCard drink={drink} />}</p>;
         })}
     </div>
   )

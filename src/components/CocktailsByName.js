@@ -37,7 +37,7 @@ const CocktailsByName = () => {
       />
       {cocktailData &&
         cocktailData.map((drink) => {
-          return <li key={drink.idDrink}>{<DrinkCard drink={drink} />}</li>;
+          return <p key={drink.idDrink} style={{display: 'inline-flex', padding:'40px'}}>{<DrinkCard drink={drink} />}</p>;
         })}
     </div>
   );

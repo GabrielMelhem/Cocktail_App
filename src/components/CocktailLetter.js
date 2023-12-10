@@ -3,11 +3,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const CocktailLetter = () => {
-  const [selectedLetter, setSelectedLetter] = useState(null);
+  const [selectedLetter, setSelectedLetter] = useState('');
 
   const letterSelection = (e) => {
+    e.preventDefault();
     setSelectedLetter(e.target.textContent);
-    console.log("selectedLetter", selectedLetter);
+    console.log("selectedLetter1", selectedLetter);
   };
   return (
     <div>

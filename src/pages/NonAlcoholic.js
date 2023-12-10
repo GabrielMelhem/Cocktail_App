@@ -33,10 +33,9 @@ function NonAlcoholic() {
 
 
   return (
-    <div>Non alcoholic
+    <div>
       {drinks && drinks.map((drink) => {
-        
-        return <p key={drink.idDrink}>{<DrinkCard drink={drink} />}</p>
+        return <p key={drink.idDrink} style={{display: 'inline-flex', padding:'40px'}}>{<DrinkCard drink={drink} />}</p>
       })}
     </div>
   )

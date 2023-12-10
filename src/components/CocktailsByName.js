@@ -29,7 +29,11 @@ const CocktailsByName = () => {
   };
   return (
     <div>
-      CocktailsByName
+      <div className="container">
+        <h2 className="title" style={{fontSize: '60px'}}>
+          <span>Search By Name</span> 
+        </h2>
+      
       <CocktailInput
         cocktailSelection={cocktailSelection}
         selectedCocktail={selectedCocktail}
@@ -39,6 +43,7 @@ const CocktailsByName = () => {
         cocktailData.map((drink) => {
           return <p key={drink.idDrink} style={{display: 'inline-flex', padding:'40px'}}>{<DrinkCard drink={drink} />}</p>;
         })}
+        </div>
     </div>
   );
 };

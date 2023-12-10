@@ -12,7 +12,10 @@ const CocktailLetter = () => {
   };
   return (
     <div>
-      Browse Your Favorite Cocktails By pressing a Letter:
+      <div className="container">
+      <h2 className="title" style={{fontSize: '60px'}}>
+          <span>Search By Letter</span> 
+      </h2>
       <Link
         to={`/CocktailsByLetter/${selectedLetter}`}
         onClick={letterSelection}
@@ -169,6 +172,7 @@ const CocktailLetter = () => {
       >
         Z
       </Link>
+      </div>
     </div>
   );
 };

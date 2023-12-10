@@ -40,19 +40,16 @@ const Navbar = () => {
             </div>
             <ul className="nav no-search">
               <li className="nav-item">
-                <a href="#">Home</a>
+                <a href="/">Home</a>
               </li>
               <li className="nav-item">
-                <a href="#">About</a>
+                <a href="/Alcoholic">Alcoholic</a>
               </li>
               <li className="nav-item">
-                <a href="#">Work</a>
+                <a href="/Non_Alcoholic">Non_Alcoholic</a>
               </li>
               <li className="nav-item">
-                <a href="#">Careers</a>
-              </li>
-              <li className="nav-item">
-                <a href="#">Contact Us</a>
+                <a href="/contact">Contact Us</a>
               </li>
               <i className="fas fa-search" id="search-icon"></i>
               <input className="search-input" type="text" placeholder="Search.." />

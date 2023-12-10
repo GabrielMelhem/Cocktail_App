@@ -28,7 +28,9 @@ const CocktailsByLetter = () => {
   }, []);
 
   return (
-    <div>CocktailsByLetter
+    <div>
+      
+      CocktailsByLetter
     
       {cocktailsData &&
         cocktailsData.map((drink) => {

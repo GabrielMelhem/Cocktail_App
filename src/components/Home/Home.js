@@ -82,8 +82,7 @@ function Home() {
         <CocktailLetter />
       </div>
 
-      <About />
-      {/* <SocialMedia /> */}
+      {/* <About /> */}
       <Footer />
     </>
   );

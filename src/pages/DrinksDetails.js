@@ -34,8 +34,8 @@ const DrinksDetails = () => {
             <ListGroup key={detail.idDrink} >
               <ListGroup.Item>Name: {detail.strDrink}</ListGroup.Item>
               <ListGroup.Item>Instructions: {detail.strInstructions}</ListGroup.Item>
-              <ListGroup.Item>strIngredients: {detail.strIngredient1}, {detail.strIngredient2}, {detail.strIngredient3}</ListGroup.Item>
-              <ListGroup.Item>Measure: {detail.strMeasure1}, {detail.strMeasure2}, {detail.strMeasure3}</ListGroup.Item>
+              <ListGroup.Item>strIngredients: {detail.strIngredient1}, {detail.strIngredient2}, {detail.strIngredient3}, {detail.strIngredient4}</ListGroup.Item>
+              <ListGroup.Item>Measure: {detail.strMeasure1}, {detail.strMeasure2}, {detail.strMeasure3},{detail.strMeasure4}</ListGroup.Item>
             </ListGroup>
           );
         })}

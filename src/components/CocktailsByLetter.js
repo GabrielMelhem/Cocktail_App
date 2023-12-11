@@ -9,7 +9,7 @@ const CocktailsByLetter = () => {
   const {selectedLetter} = useParams();
   console.log('selectedLetter: ', selectedLetter);
 
-  const fetchCocktailByLetter = async (letter) => {
+  const fetchCocktailByLetter = async () => {
     try {
       const response = await fetch(
         `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${selectedLetter}`

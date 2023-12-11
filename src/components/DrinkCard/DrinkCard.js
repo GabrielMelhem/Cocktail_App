@@ -1,13 +1,13 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import Placeholder from 'react-bootstrap/Placeholder';
 
 
 const DrinkCard = (drink) => {
   return (
     <div className="drinkCard">
-      <Card style={{ width: "18rem", padding: "20px" }}>
+      <Card border="secondary" style={{ width: "18rem", padding: "20px" }}>
         <Card.Img
           variant="top"
           width="150rem"

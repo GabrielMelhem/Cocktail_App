@@ -33,9 +33,12 @@ const DrinksDetails = () => {
           return (
             <ListGroup key={detail.idDrink} >
               <ListGroup.Item>Name: {detail.strDrink}</ListGroup.Item>
+              <ListGroup.Item>Category: {detail.strCategory}</ListGroup.Item>
+              <ListGroup.Item>Alcoholic: {detail.strAlcoholic}</ListGroup.Item>
               <ListGroup.Item>Instructions: {detail.strInstructions}</ListGroup.Item>
-              <ListGroup.Item>strIngredients: {detail.strIngredient1}, {detail.strIngredient2}, {detail.strIngredient3}, {detail.strIngredient4}</ListGroup.Item>
-              <ListGroup.Item>Measure: {detail.strMeasure1}, {detail.strMeasure2}, {detail.strMeasure3},{detail.strMeasure4}</ListGroup.Item>
+              <ListGroup.Item>strIngredients: {detail.strIngredient1}, {detail.strIngredient2}, {detail.strIngredient3}, {detail.strIngredient4}, {detail.strIngredient5}</ListGroup.Item>
+              <ListGroup.Item>Measure: {detail.strMeasure1}, {detail.strMeasure2}, {detail.strMeasure3},{detail.strMeasure4},{detail.strMeasure5}</ListGroup.Item>
+              <ListGroup.Item>Last updated: {detail.dateModified}</ListGroup.Item>
             </ListGroup>
           );
         })}

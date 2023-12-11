@@ -17,14 +17,14 @@ function Home() {
         <MDBCarouselItem itemId={1}>
           <img src="images/home12.jpg" className="d-block w-100" alt="..." />
           <MDBCarouselCaption>
-            <h5>Your Cocktail provide you</h5>
+            <h5>Cocktail provide you</h5>
           </MDBCarouselCaption>
         </MDBCarouselItem>
 
         <MDBCarouselItem itemId={2}>
           <img src="images/home1.jpg" className="d-block w-100" alt="..." />
           <MDBCarouselCaption>
-            <h5>All The Drinks and Cocktails Informations</h5>
+            <h5>The all Informations about Drinks and Cocktails</h5>
           </MDBCarouselCaption>
         </MDBCarouselItem>
 

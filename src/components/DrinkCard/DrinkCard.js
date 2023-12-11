@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Card } from "react-bootstrap";
 import {
   MDBCard,
   MDBCardImage,
@@ -10,7 +9,22 @@ import {
   MDBCardFooter
 } from "mdb-react-ui-kit";
 
+import { useState, useEffect } from 'react';
+
 const DrinkCard = (drink) => {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    // Update the current time every second
+    const interval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array to run this effect only once on mount
+
+
   return (
     <>
       <MDBCard className="h-100" border="secondary" style={{ width: "18rem", padding: "20px" }}>
@@ -31,7 +45,7 @@ const DrinkCard = (drink) => {
           </MDBCardText>
         </MDBCardBody>
         <MDBCardFooter>
-          <small className="text-muted">Last updated 3 mins ago</small>
+          <small className="text-muted">Time: {currentTime.toLocaleTimeString()}</small>
         </MDBCardFooter> 
       </MDBCard>
     </>

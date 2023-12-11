@@ -38,6 +38,7 @@
   align-items: center;
   height: 50px;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .navbar img {

@@ -8,7 +8,6 @@ import {
 
 import CocktailCategory from "../CocktailCategory/CocktailCategory.js";
 import CocktailsByName from "../CocktailsByName.js";
-import About from "../About";
 import Footer from "../Footer/Footer";
 import Carousel from 'react-bootstrap/Carousel';
 import CocktailLetter from "../CocktailLetter.js";

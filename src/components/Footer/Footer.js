@@ -1,11 +1,9 @@
 import React from "react";
-import { FooterSection, FooterDesc } from "./style.js";
 import "./Footer.css";
+import { IoLogoGithub , IoLogoFacebook,IoLogoLinkedin ,IoLogoSlack  } from 'react-icons/io5';
 
 function Footer() {
   return (
-    <FooterSection>
-      <FooterDesc> </FooterDesc>
       <footer className="footer">
         <div className="container">
           <div className="row">
@@ -13,77 +11,39 @@ function Footer() {
               <h4>company</h4>
               <ul>
                 <li>
-                  <a href="#">about us</a>
+                  <a href="/">Home</a>
                 </li>
                 <li>
-                  <a href="#">our services</a>
+                  <a href="/Alcoholic">Alcoholic</a>
                 </li>
                 <li>
-                  <a href="#">privacy policy</a>
+                  <a href="/Non_Alcoholic">Non Alcoholic</a>
                 </li>
                 <li>
-                  <a href="#">affiliate program</a>
-                </li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>get help</h4>
-              <ul>
-                <li>
-                  <a href="#">FAQ</a>
-                </li>
-                <li>
-                  <a href="#">shipping</a>
-                </li>
-                <li>
-                  <a href="#">returns</a>
-                </li>
-                <li>
-                  <a href="#">order status</a>
-                </li>
-                <li>
-                  <a href="#">payment options</a>
-                </li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>online shop</h4>
-              <ul>
-                <li>
-                  <a href="#">watch</a>
-                </li>
-                <li>
-                  <a href="#">bag</a>
-                </li>
-                <li>
-                  <a href="#">shoes</a>
-                </li>
-                <li>
-                  <a href="#">dress</a>
+                  <a href="/contact">Contact us</a>
                 </li>
               </ul>
             </div>
             <div className="footer-col">
               <h4>follow us</h4>
               <div className="social-links">
-                <a href="#">
-                  <i className="fab fa-facebook-f"></i>
+                <a href="https://github.com/GabrielMelhem/Cocktail_App">
+                <IoLogoGithub color="#211F1F" size={40} />
+                </a>
+                <a href="https://www.linkedin.com/in/gabriel-melhem-9b714821a/">
+                <IoLogoLinkedin color="#0077B5" size={40} />
                 </a>
                 <a href="#">
-                  <i className="fab fa-twitter"></i>
+                <IoLogoFacebook color="#3b5998" size={40} />
                 </a>
                 <a href="#">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#">
-                  <i className="fab fa-linkedin-in"></i>
+                <IoLogoSlack  color="#4A154B" size={40} />
                 </a>
               </div>
             </div>
           </div>
         </div>
       </footer>
-    </FooterSection>
   );
 }
 

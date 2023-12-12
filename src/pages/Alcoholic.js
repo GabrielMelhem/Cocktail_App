@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import DrinkCard from "../components/DrinkCard/DrinkCard";
+import Footer from "./../components/Footer/Footer";
 
 function Alcoholic() {
   const location = useLocation();
@@ -29,16 +30,24 @@ function Alcoholic() {
   useEffect(() => {
     fetchAlcoholicCocktails();
   }, []);
-  
 
   return (
-    <div>
-      
-      {drinks &&
-        drinks.map((drink) => {
-          return <p key={drink.idDrink} style={{display: 'inline-table', padding:'40px'}}>{<DrinkCard drink={drink} />}</p>;
-        })}
-    </div>
+    <>
+      <div>
+        {drinks &&
+          drinks.map((drink) => {
+            return (
+              <p
+                key={drink.idDrink}
+                style={{ display: "inline-table", padding: "40px" }}
+              >
+                {<DrinkCard drink={drink} />}
+              </p>
+            );
+          })}
+      </div>
+      <Footer />
+    </>
   );
 }
 

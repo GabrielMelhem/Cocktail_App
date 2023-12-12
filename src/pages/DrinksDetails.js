@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCol,
-  MDBRow,
-} from "mdb-react-ui-kit";
+import { MDBCard, MDBCardBody, MDBCol, MDBRow } from "mdb-react-ui-kit";
+import Footer from "./../components/Footer/Footer";
 
 const DrinksDetails = () => {
   const [details, setDetails] = useState([]);
@@ -32,148 +28,160 @@ const DrinksDetails = () => {
   }, []);
 
   return (
-    <div>
-
-      {details &&
-        details.map((detail) => {
-          return (
-            <MDBRow>
-              <MDBCol xl={4} lg={6} className="mb-4">
-                <MDBCard>
-                  <MDBCardBody>
-                    <div className="d-flex align-items-center">
-                      <img
-                        src={detail.strDrinkThumb}
-                        alt=""
-                        style={{ width: "45px", height: "45px" }}
-                        className="rounded-circle"
-                      />
-                      <div className="ms-3">
-                        <p className="fw-bold mb-1">Name</p>
-                        <p className="text-muted mb-0">{detail.strDrink}</p>
+    <>
+      <div>
+        {details &&
+          details.map((detail) => {
+            return (
+              <MDBRow>
+                <MDBCol xl={4} lg={6} className="mb-4">
+                  <MDBCard>
+                    <MDBCardBody>
+                      <div className="d-flex align-items-center">
+                        <img
+                          src={detail.strDrinkThumb}
+                          alt=""
+                          style={{ width: "45px", height: "45px" }}
+                          className="rounded-circle"
+                        />
+                        <div className="ms-3">
+                          <p className="fw-bold mb-1">Name</p>
+                          <p className="text-muted mb-0">{detail.strDrink}</p>
+                        </div>
                       </div>
-                    </div>
-                  </MDBCardBody>
-                </MDBCard>
-              </MDBCol>
-              <MDBCol xl={4} lg={6} className="mb-4">
-                <MDBCard>
-                  <MDBCardBody>
-                    <div className="d-flex align-items-center">
-                      <img
-                        src={detail.strDrinkThumb}
-                        alt=""
-                        style={{ width: "45px", height: "45px" }}
-                        className="rounded-circle"
-                      />
-                      <div className="ms-3">
-                        <p className="fw-bold mb-1">Category</p>
-                        <p className="text-muted mb-0">{detail.strCategory}</p>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBCol>
+                <MDBCol xl={4} lg={6} className="mb-4">
+                  <MDBCard>
+                    <MDBCardBody>
+                      <div className="d-flex align-items-center">
+                        <img
+                          src={detail.strDrinkThumb}
+                          alt=""
+                          style={{ width: "45px", height: "45px" }}
+                          className="rounded-circle"
+                        />
+                        <div className="ms-3">
+                          <p className="fw-bold mb-1">Category</p>
+                          <p className="text-muted mb-0">
+                            {detail.strCategory}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </MDBCardBody>
-                </MDBCard>
-              </MDBCol>
-              <MDBCol xl={4} lg={6} className="mb-4">
-                <MDBCard>
-                  <MDBCardBody>
-                    <div className="d-flex align-items-center">
-                      <img
-                        src={detail.strDrinkThumb}
-                        alt=""
-                        style={{ width: "45px", height: "45px" }}
-                        className="rounded-circle"
-                      />
-                      <div className="ms-3">
-                        <p className="fw-bold mb-1">Alcoholic</p>
-                        <p className="text-muted mb-0">
-                        {detail.strAlcoholic}
-                        </p>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBCol>
+                <MDBCol xl={4} lg={6} className="mb-4">
+                  <MDBCard>
+                    <MDBCardBody>
+                      <div className="d-flex align-items-center">
+                        <img
+                          src={detail.strDrinkThumb}
+                          alt=""
+                          style={{ width: "45px", height: "45px" }}
+                          className="rounded-circle"
+                        />
+                        <div className="ms-3">
+                          <p className="fw-bold mb-1">Alcoholic</p>
+                          <p className="text-muted mb-0">
+                            {detail.strAlcoholic}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </MDBCardBody>
-                </MDBCard>
-              </MDBCol>
-              <MDBCol xl={4} lg={6} className="mb-4">
-                <MDBCard>
-                  <MDBCardBody>
-                    <div className="d-flex align-items-center">
-                      <img
-                        src={detail.strDrinkThumb}
-                        alt=""
-                        style={{ width: "45px", height: "45px" }}
-                        className="rounded-circle"
-                      />
-                      <div className="ms-3">
-                        <p className="fw-bold mb-1">Instructions</p>
-                        <p className="text-muted mb-0">
-                        {detail.strInstructions}
-                        </p>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBCol>
+                <MDBCol xl={4} lg={6} className="mb-4">
+                  <MDBCard>
+                    <MDBCardBody>
+                      <div className="d-flex align-items-center">
+                        <img
+                          src={detail.strDrinkThumb}
+                          alt=""
+                          style={{ width: "45px", height: "45px" }}
+                          className="rounded-circle"
+                        />
+                        <div className="ms-3">
+                          <p className="fw-bold mb-1">Instructions</p>
+                          <p className="text-muted mb-0">
+                            {detail.strInstructions}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </MDBCardBody>
-                </MDBCard>
-              </MDBCol>
-              <MDBCol xl={4} lg={6} className="mb-4">
-                <MDBCard>
-                  <MDBCardBody>
-                    <div className="d-flex align-items-center">
-                      <img
-                        src={detail.strDrinkThumb}
-                        alt=""
-                        style={{ width: "45px", height: "45px" }}
-                        className="rounded-circle"
-                      />
-                      <div className="ms-3">
-                        <p className="fw-bold mb-1">Ingredients</p>
-                        <p className="text-muted mb-0">
-                        {detail.strIngredient1}, {detail.strIngredient2}, {detail.strIngredient3}, {detail.strIngredient4}, {detail.strIngredient5}
-                        </p>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBCol>
+                <MDBCol xl={4} lg={6} className="mb-4">
+                  <MDBCard>
+                    <MDBCardBody>
+                      <div className="d-flex align-items-center">
+                        <img
+                          src={detail.strDrinkThumb}
+                          alt=""
+                          style={{ width: "45px", height: "45px" }}
+                          className="rounded-circle"
+                        />
+                        <div className="ms-3">
+                          <p className="fw-bold mb-1">Ingredients</p>
+                          <p className="text-muted mb-0">
+                            {detail.strIngredient1}, {detail.strIngredient2},{" "}
+                            {detail.strIngredient3}, {detail.strIngredient4},{" "}
+                            {detail.strIngredient5}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </MDBCardBody>
-                </MDBCard>
-              </MDBCol>
-              <MDBCol xl={4} lg={6} className="mb-4">
-                <MDBCard>
-                  <MDBCardBody>
-                    <div className="d-flex align-items-center">
-                      <img
-                        src={detail.strDrinkThumb}
-                        alt=""
-                        style={{ width: "45px", height: "45px" }}
-                        className="rounded-circle"
-                      />
-                      <div className="ms-3">
-                        <p className="fw-bold mb-1">Measure</p>
-                        <p className="text-muted mb-0">{detail.strMeasure1}, {detail.strMeasure2}, {detail.strMeasure3},{detail.strMeasure4},{detail.strMeasure5}</p>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBCol>
+                <MDBCol xl={4} lg={6} className="mb-4">
+                  <MDBCard>
+                    <MDBCardBody>
+                      <div className="d-flex align-items-center">
+                        <img
+                          src={detail.strDrinkThumb}
+                          alt=""
+                          style={{ width: "45px", height: "45px" }}
+                          className="rounded-circle"
+                        />
+                        <div className="ms-3">
+                          <p className="fw-bold mb-1">Measure</p>
+                          <p className="text-muted mb-0">
+                            {detail.strMeasure1}, {detail.strMeasure2},{" "}
+                            {detail.strMeasure3},{detail.strMeasure4},
+                            {detail.strMeasure5}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </MDBCardBody>
-                </MDBCard>
-              </MDBCol>
-              <MDBCol xl={4} lg={6} className="mb-4">
-                <MDBCard>
-                  <MDBCardBody>
-                    <div className="d-flex align-items-center">
-                      <img
-                        src={detail.strDrinkThumb}
-                        alt=""
-                        style={{ width: "45px", height: "45px" }}
-                        className="rounded-circle"
-                      />
-                      <div className="ms-3">
-                        <p className="fw-bold mb-1">Last updated</p>
-                        <p className="text-muted mb-0">{detail.dateModified}</p>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBCol>
+                <MDBCol xl={4} lg={6} className="mb-4">
+                  <MDBCard>
+                    <MDBCardBody>
+                      <div className="d-flex align-items-center">
+                        <img
+                          src={detail.strDrinkThumb}
+                          alt=""
+                          style={{ width: "45px", height: "45px" }}
+                          className="rounded-circle"
+                        />
+                        <div className="ms-3">
+                          <p className="fw-bold mb-1">Last updated</p>
+                          <p className="text-muted mb-0">
+                            {detail.dateModified}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </MDBCardBody>
-                </MDBCard>
-              </MDBCol>
-            </MDBRow>
-          );
-        })}
-    </div>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBCol>
+              </MDBRow>
+            );
+          })}
+      </div>
+      <Footer />
+    </>
   );
 };
 

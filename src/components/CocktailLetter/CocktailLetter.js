@@ -14,6 +14,11 @@ const CocktailLetter = () => {
     setSelectedLetter(Letter);
     console.log("selectedLetter1", selectedLetter);
   };
+
+  //! Array with letters for solution Two
+  const alphabet = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
+  console.log("alphabet :>> ", alphabet);
+
   return (
     <div>
       <h2
@@ -22,6 +27,20 @@ const CocktailLetter = () => {
       >
         <span>Search By Letter</span>
       </h2>
+      <div className="lettersLink">
+        {alphabet &&
+          alphabet.map((letter) => {
+            return <Link  to={`/CocktailsByLetter/${letter}`}>{letter}</Link>;
+            })}
+      </div>
+      
+      {/* 
+      //! SOLUTION ONE : just create every link with the right URL 
+      <Link to={`/CocktailsByLetter/A`}>A</Link>
+      <span> </span>
+      <Link to={`/CocktailsByLetter/B`}>B</Link>
+      <span> </span>
+      
       <div className="lettersLink">
         <Link className="letterLink"
           to={`/CocktailsByLetter/${selectedLetter}`}
@@ -204,7 +223,7 @@ const CocktailLetter = () => {
         >
           Z
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

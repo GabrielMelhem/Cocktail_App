@@ -27,7 +27,7 @@ const DrinkCard = (drink) => {
 
   return (
     <>
-      <MDBCard className="h-100" border="secondary" style={{ width: "18rem", padding: "20px" }}>
+      <MDBCard className="h-100" border="secondary" style={{ width: "18rem", padding: "20px" }} >
         <MDBCardImage
           variant="top"
           src={drink.drink.strDrinkThumb}

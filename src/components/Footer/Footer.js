@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   IoLogoGithub,
   IoLogoFacebook,
@@ -34,12 +35,12 @@ function Footer() {
           >
             <IoLogoLinkedin color="#0077B5" size={40} />
           </a>
-          <a href="" className="me-4 text-reset">
+          <Link to="" className="me-4 text-reset">
             <IoLogoFacebook color="#3b5998" size={40} />
-          </a>
-          <a href="" className="me-4 text-reset">
+          </Link>
+          <Link to="" className="me-4 text-reset">
             <IoLogoSlack color="#4A154B" size={40} />
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -54,24 +55,24 @@ function Footer() {
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Pages</h6>
               <p>
-                <a href="/" className="text-reset">
+                <Link to="/" className="text-reset">
                   Home
-                </a>
+                </Link>
               </p>
               <p>
-                <a href="/Alcoholic" className="text-reset">
+                <Link to="/Alcoholic" className="text-reset">
                   Alcoholic
-                </a>
+                </Link>
               </p>
               <p>
-                <a href="/Non_Alcoholic" className="text-reset">
+                <Link to="/Non_Alcoholic" className="text-reset">
                   Non Alcoholic
-                </a>
+                </Link>
               </p>
               <p>
-                <a href="/contact" className="text-reset">
+                <Link to="/contact" className="text-reset">
                   Contact us
-                </a>
+                </Link>
               </p>
             </MDBCol>
             <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-md-0 mb-4">
@@ -102,9 +103,9 @@ function Footer() {
         style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
       >
         © 2023 Copyright:
-        <a className="text-reset fw-bold" href="#">
+        <Link className="text-reset fw-bold" to="https://www.linkedin.com/in/gabriel-melhem-9b714821a/">
           Gabriel
-        </a>
+        </Link>
       </div>
     </MDBFooter>
   );

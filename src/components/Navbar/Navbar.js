@@ -25,7 +25,7 @@ const Navbar = () => {
               <Link to="/Non_Alcoholic">Non Alcoholic</Link>
             </li>
             <li className="nav-item">
-              <a href="/contact">Contact Us</a>
+              <Link to="/contact">Contact Us</Link>
             </li>
           </ul>
         </nav>

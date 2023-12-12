@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import CocktailInput from "./CocktailInput.js";
-import DrinkCard from '../components/DrinkCard/DrinkCard';
+import CocktailInput from "../CocktailInput/CocktailInput.js";
+import DrinkCard from "../DrinkCard/DrinkCard.js";
 
 const CocktailsByName = () => {
-  const [selectedCocktail, setSelectedCocktail] = useState('');
+  const [selectedCocktail, setSelectedCocktail] = useState("");
   const [cocktailData, setCocktailData] = useState([]);
 
   const fetchCocktailByName = async (cocktailName) => {
@@ -27,13 +27,14 @@ const CocktailsByName = () => {
     fetchCocktailByName(selectedCocktail);
     console.log("cocktail selected", selectedCocktail);
   };
+
+  
   return (
-    <div>
-      <div className="container">
-        <h2 className="title" style={{fontSize: '60px'}}>
-          <span>Search By Name</span> 
-        </h2>
-      
+    <>
+      <h2 className="title" style={{ fontSize: "40px" ,marginLeft:'5%', marginTop: '30px'}}>
+        <span >Search By Cocktail Name</span>
+      </h2>
+
       <CocktailInput
         cocktailSelection={cocktailSelection}
         selectedCocktail={selectedCocktail}
@@ -41,10 +42,16 @@ const CocktailsByName = () => {
       />
       {cocktailData &&
         cocktailData.map((drink) => {
-          return <p key={drink.idDrink} style={{display: 'inline-flex', padding:'40px'}}>{<DrinkCard drink={drink} />}</p>;
+          return (
+            <p
+              key={drink.idDrink}
+              style={{ display: "inline-flex", padding: "40px" }}
+            >
+              {<DrinkCard drink={drink} />}
+            </p>
+          );
         })}
-        </div>
-    </div>
+    </>
   );
 };
 

@@ -1,0 +1,21 @@
+
+.cocktailInput{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  height: auto;
+  margin-left: 5%;
+}
+
+
+.cocktailForm {
+    display: grid;
+    width: 95%;
+    
+}
+
+#cocktailInput{
+    margin-bottom: 10px;
+}
+
+.sBtn{
+}

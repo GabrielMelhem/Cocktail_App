@@ -9,57 +9,16 @@ import { FaPhone, FaFax, FaEnvelope, FaHome } from "react-icons/fa";
 import {
   MDBFooter,
   MDBContainer,
-  MDBIcon,
   MDBCol,
   MDBRow,
 } from "mdb-react-ui-kit";
 
 function Footer() {
   return (
-    // <footer className="footer">
-    //   <div className="container">
-    //     <div className="row">
-    //       <div className="footer-col">
-    //         <h4>company</h4>
-    //         <ul>
-    //           <li>
-    //             <a href="/">Home</a>
-    //           </li>
-    //           <li>
-    //             <a href="/Alcoholic">Alcoholic</a>
-    //           </li>
-    //           <li>
-    //             <a href="/Non_Alcoholic">Non Alcoholic</a>
-    //           </li>
-    //           <li>
-    //             <a href="/contact">Contact us</a>
-    //           </li>
-    //         </ul>
-    //       </div>
-    //       <div className="footer-col">
-    //         <h4>follow us</h4>
-    //         <div className="social-links">
-    //           <a href="https://github.com/GabrielMelhem/Cocktail_App">
-    //           <IoLogoGithub color="#211F1F" size={40} />
-    //           </a>
-    //           <a href="https://www.linkedin.com/in/gabriel-melhem-9b714821a/">
-    //           <IoLogoLinkedin color="#0077B5" size={40} />
-    //           </a>
-    //           <a href="#">
-    //           <IoLogoFacebook color="#3b5998" size={40} />
-    //           </a>
-    //           <a href="#">
-    //           <IoLogoSlack  color="#4A154B" size={40} />
-    //           </a>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </footer>
     <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div className="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
+          <span>Get connected with me on social networks:</span>
         </div>
 
         <div>
@@ -118,19 +77,19 @@ function Footer() {
             <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-md-0 mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
               <p>
-                <FaHome size={15} className="me-2" color="secondary" />
-                Paulsborner Str. 88, 10709 Berlin
+                <FaHome size={15} className="me-3" color="secondary" />
+                 Paulsborner Str. 88, 10709 Berlin
               </p>
               <p>
-                <FaEnvelope size={15} className="me-3" color="secondary" />
+                <FaEnvelope size={13} className="me-3" color="secondary" />
                 Gabrielmelhem@gmail.com
               </p>
               <p>
-                <FaPhone size={15} className="me-3" color="secondary" />+ 01 234
+                <FaPhone size={13} className="me-3" color="secondary" />+ 01 234
                 567 88
               </p>
               <p>
-                <FaFax size={15} className="me-3" color="secondary" />+ 01 234
+                <FaFax size={13} className="me-3" color="secondary" />+ 01 234
                 567 89
               </p>
             </MDBCol>

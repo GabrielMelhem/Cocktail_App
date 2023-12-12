@@ -6,7 +6,7 @@ import {
 } from "mdb-react-ui-kit";
 
 import CocktailCategory from "../CocktailCategory/CocktailCategory.js";
-import CocktailsByName from "../CocktailsByName.js";
+import CocktailsByName from "../CocktailsByName/CocktailsByName.js";
 import Footer from "../Footer/Footer";
 import CocktailLetter from "../CocktailLetter.js";
 

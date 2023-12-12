@@ -16,8 +16,8 @@ const CocktailLetter = () => {
       </h2>
       <div className="lettersLink">
         {alphabet &&
-          alphabet.map((letter) => {
-            return <Link  to={`/CocktailsByLetter/${letter}`} className="letterLink">{letter}</Link>;
+          alphabet.map((letter,index) => {
+            return <Link key={index} to={`/CocktailsByLetter/${letter}`} className="letterLink">{letter}</Link>;
             })}
       </div>
     </div>

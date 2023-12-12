@@ -2,6 +2,7 @@ import React from 'react'
 import { useState,useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import DrinkCard from '../components/DrinkCard/DrinkCard';
+import Footer from "./Footer/Footer";
 
 const CocktailsByLetter = () => {
   
@@ -28,12 +29,15 @@ const CocktailsByLetter = () => {
   }, []);
 
   return (
+    <>
     <div>
       {cocktailsData &&
         cocktailsData.map((drink) => {
           return <p key={drink.idDrink} style={{display: 'inline-flex', padding:'40px'}}>{<DrinkCard drink={drink} />}</p>;
         })}
     </div>
+    <Footer />
+    </>
   )
 }
 

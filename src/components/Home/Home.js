@@ -8,7 +8,7 @@ import {
 import CocktailCategory from "../CocktailCategory/CocktailCategory.js";
 import CocktailsByName from "../CocktailsByName/CocktailsByName.js";
 import Footer from "../Footer/Footer";
-import CocktailLetter from "../CocktailLetter.js";
+import CocktailLetter from "../CocktailLetter/CocktailLetter.js";
 
 function Home() {
   return (

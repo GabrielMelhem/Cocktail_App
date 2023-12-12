@@ -1,0 +1,21 @@
+
+
+.lettersLink{
+  margin-top: 30px;
+  margin-bottom: 50px;
+  height: auto;
+  margin-left: 5%;
+  text-align: center;
+}
+
+.letterLink{
+  padding: 20px;
+  text-decoration: none;
+  color: gray;
+  
+}
+
+.letterLink:hover{
+  color: #3498db;
+  
+}

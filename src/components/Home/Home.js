@@ -10,7 +10,16 @@ import CocktailsByName from "../CocktailsByName/CocktailsByName.js";
 import Footer from "../Footer/Footer";
 import CocktailLetter from "../CocktailLetter/CocktailLetter.js";
 
+import { useContext } from "react";
+import { app } from "../../config/firebaseConfig";
+import {AuthContext} from "../../context/AuthContext";
+
 function Home() {
+
+  // Subscribe Home to the context
+  const { user } = useContext(AuthContext);
+  console.log(app);
+
   return (
     <>
       <MDBCarousel showIndicators showControls fade>
@@ -35,7 +44,7 @@ function Home() {
           </MDBCarouselCaption>
         </MDBCarouselItem>
       </MDBCarousel>
-
+      <h4>Welcome {user ? user.email : "misterious user"} to my App</h4>
       <div className="categorySection">
         <CocktailCategory />
       </div>

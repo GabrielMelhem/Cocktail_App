@@ -1,8 +1,17 @@
 import React from "react";
 import "./navBar.css";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { Button } from "react-bootstrap";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const { logout } = useContext(AuthContext);
+  //   console.log("user :>> ", user);
+  const user = true;
+  const logoutUser = () => {
+    logout();
+  };
   return (
     <div className="page-wrapper">
       <div className="nav-wrapper">
@@ -27,10 +36,22 @@ const Navbar = () => {
             <li className="nav-item">
               <Link to="/contact">Contact Us</Link>
             </li>
+            <li className="nav-item">
+              <Link to="register">Register</Link> <Link to="login">Login</Link>
+            </li>
+            <li className="nav-item">
+              {user ? (
+                <Button variant="danger" onClick={logoutUser}>
+                  Logout
+                </Button>
+              ) : (
+                <Button variant="info">Login</Button>
+              )}
+            </li>
           </ul>
         </nav>
       </div>
-      </div>
+    </div>
   );
 };
 

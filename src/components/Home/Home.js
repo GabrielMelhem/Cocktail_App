@@ -56,7 +56,7 @@ function Home() {
       </MDBCarousel>
 
       <userTitle>
-        <Span style={{ left: `${position}px` , marginTop:'750px'}}>
+        <Span style={{ left: `${position}px` , marginTop:'800px'}}>
           Welcome {user ? user.email : " Gast"} to Cocktail App
         </Span>
       </userTitle>

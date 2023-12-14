@@ -38,13 +38,14 @@ const Navbar = () => {
             </li>
             
              <li className="nav-item">
-              <Link to="/register">Register</Link>{" "}
+              
+              <Link to="/login">Login</Link>{" "}
               {user ? (
                 <Button variant="light" onClick={logoutUser}>
                   Logout
                 </Button>
               ) : (
-                <Link to="/login">Login</Link>
+                <Link to="/register">Register</Link>
               )}
             </li>
             {/* <li className="nav-item">

@@ -9,12 +9,22 @@ import CocktailCategory from "../CocktailCategory/CocktailCategory.js";
 import CocktailsByName from "../CocktailsByName/CocktailsByName.js";
 import Footer from "../Footer/Footer";
 import CocktailLetter from "../CocktailLetter/CocktailLetter.js";
-
+import { useState, useEffect } from "react";
 import { useContext } from "react";
 import { app } from "../../config/firebaseConfig";
-import {AuthContext} from "../../context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
+import {userTitle,Span} from './style.js';
 
 function Home() {
+  const [position, setPosition] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPosition((prevPosition) => prevPosition + 1);
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Subscribe Home to the context
   const { user } = useContext(AuthContext);
@@ -44,7 +54,13 @@ function Home() {
           </MDBCarouselCaption>
         </MDBCarouselItem>
       </MDBCarousel>
-      <h4>Welcome {user ? user.email : "misterious user"} to my App</h4>
+
+      <userTitle>
+        <Span style={{ left: `${position}px` , marginTop:'750px'}}>
+          Welcome {user ? user.email : " Gast"} to Cocktail App
+        </Span>
+      </userTitle>
+
       <div className="categorySection">
         <CocktailCategory />
       </div>

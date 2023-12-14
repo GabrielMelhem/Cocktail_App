@@ -1,6 +1,8 @@
-import React from 'react'
+import React from "react";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { Link } from "react-router-dom";
+import { MDBInput, MDBBtn } from "mdb-react-ui-kit";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -19,22 +21,51 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-     console.log("email, password :>> ", email, password);
+    console.log("email, password :>> ", email, password);
     login(email, password);
   };
 
   return (
-    <>
-      <h1>Login</h1>
+    <div className="container" style={{ width: "40%", marginTop: "100px" }}>
+      {/* <h1>Login</h1>
       <form onSubmit={handleLogin}>
         <input type="email" id="email" onChange={handleEmailChange} />
         <label htmlFor="email">Email</label>
         <input type="password" id="password" onChange={handlePasswordChange} />
         <label htmlFor="password">Password</label>
         <button type="submit">Login</button>
-      </form>
-    </>
-  )
-}
+      </form> */}
+      <form onSubmit={handleLogin}>
+        <MDBInput
+          className="mb-4"
+          type="email"
+          id="email"
+          placeholder="Email address"
+          onChange={handleEmailChange}
+        />
+        <MDBInput
+          className="mb-4"
+          type="password"
+          id="password"
+          placeholder="Password"
+          onChange={handlePasswordChange}
+        />
+        <MDBBtn
+          type="submit"
+          className="text-center"
+          style={{ textAlign: "center" }}
+        >
+          Sign in
+        </MDBBtn>
 
-export default Login
+        <div className="text-center">
+          <p>
+            Not a member? <Link to="/register">Register</Link>
+          </p>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default Login;

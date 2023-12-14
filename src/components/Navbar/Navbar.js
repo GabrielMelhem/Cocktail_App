@@ -28,7 +28,7 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link to="/Alcoholic">Alcoholic</Link>
+              <Link to="/Alcoholic">Alcoholic</Link>{' '} 
             </li>
             <li className="nav-item">
               <Link to="/Non_Alcoholic">Non Alcoholic</Link>
@@ -36,10 +36,18 @@ const Navbar = () => {
             <li className="nav-item">
               <Link to="/contact">Contact Us</Link>
             </li>
-            <li className="nav-item">
-              <Link to="register">Register</Link> <Link to="login">Login</Link>
+            
+             <li className="nav-item">
+              <Link to="/register">Register</Link>{" "}
+              {user ? (
+                <Button variant="light" onClick={logoutUser}>
+                  Logout
+                </Button>
+              ) : (
+                <Link to="/login">Login</Link>
+              )}
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               {user ? (
                 <Button variant="danger" onClick={logoutUser}>
                   Logout
@@ -47,7 +55,7 @@ const Navbar = () => {
               ) : (
                 <Button variant="info">Login</Button>
               )}
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>

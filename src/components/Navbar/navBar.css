@@ -57,11 +57,11 @@
 
 .nav-item a {
   color: #00000076;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   text-decoration: none;
   transition: color 0.3s ease-out;
-  margin-left: 10px; 
+  margin-left: -25px; 
 }
 
 .nav-item a:hover {

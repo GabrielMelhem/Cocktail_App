@@ -27,19 +27,19 @@ function Footer() {
             href="https://github.com/GabrielMelhem/Cocktail_App"
             className="me-4 text-reset"
           >
-            <IoLogoGithub color="#211F1F" size={40} />
+            <IoLogoGithub color="secondary" size={40} />
           </a>
           <a
             href="https://www.linkedin.com/in/gabriel-melhem-9b714821a/"
             className="me-4 text-reset"
           >
-            <IoLogoLinkedin color="#0077B5" size={40} />
+            <IoLogoLinkedin color="secondary" size={40} />
           </a>
           <Link to="" className="me-4 text-reset">
-            <IoLogoFacebook color="#3b5998" size={40} />
+            <IoLogoFacebook color="secondary" size={40} />
           </Link>
           <Link to="" className="me-4 text-reset">
-            <IoLogoSlack color="#4A154B" size={40} />
+            <IoLogoSlack color="secondary" size={40} />
           </Link>
         </div>
       </section>
@@ -79,7 +79,7 @@ function Footer() {
               <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
               <p>
                 <FaHome size={15} className="me-3" color="secondary" />
-                 Paulsborner Str. 88, 10709 Berlin
+                 Berlin, 10709 Berlin
               </p>
               <p>
                 <FaEnvelope size={13} className="me-3" color="secondary" />

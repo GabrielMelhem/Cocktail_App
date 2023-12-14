@@ -37,8 +37,7 @@ export const CategoryPart = styled.div`
 `;
 export const PartTitle = styled.h4`
   font-size: 25px;
-  color: #eb5424;
-  margin-bottom: 20px;
+  margin-top: 10px;
 `;
 export const PartLine = styled.hr`
   width: 60%;
@@ -46,7 +45,7 @@ export const PartLine = styled.hr`
   margin-bottom: 20px;
 `;
 export const PartDesc = styled.p`
-  font-size: 14px;
-  color: black;
+  font-size: 18px;
+  color: gray;
   padding: 20px;
 `;

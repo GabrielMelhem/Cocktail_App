@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, useEffect } from 'react';
 import { Link} from 'react-router-dom';
 
 import {
@@ -14,23 +13,15 @@ import {
 
 
 function CocktailCategory() {
-  const [position, setPosition] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPosition(prevPosition => prevPosition + 1); 
-    }, 50); 
-
-    return () => clearInterval(interval);
-  }, []);
   return (
     <CategorySection>
       {/* <div className="container"> */}
-        <CategoryTitle>
-          <Span style={{ left: `${position}px` }}>Cocktail Category</Span> 
-        </CategoryTitle>
+        <h4 className="title" style={{ fontSize: "30px" ,marginLeft:'5%', marginTop: '30px'}}>
+          <span >Cocktail Category</span>
+        </h4>
         <CategoryPart first="1">
-          <PartTitle><Link to="/Alcoholic" style={{ textDecoration: "none" }}>AlCoholic</Link></PartTitle>
+          <PartTitle><Link to="/Alcoholic" style={{ textDecoration: "none" , color:"gray", margin: '0'}}>AlCoholic</Link></PartTitle>
           <PartLine />
           <PartDesc>
             Explore all the Drinks and Cocktails, that contain alcohol.
@@ -38,7 +29,7 @@ function CocktailCategory() {
         </CategoryPart>
 
         <CategoryPart>
-          <PartTitle><Link to="/Non_Alcoholic" style={{ textDecoration: "none" }}>Non AlCoholic</Link></PartTitle>
+          <PartTitle><Link to="/Non_Alcoholic" style={{ textDecoration: "none", color:"gray" }}>Non AlCoholic</Link></PartTitle>
           <PartLine />
           <PartDesc>
           Explore all the Drinks and Cocktails, that don't contain alcohol.

@@ -8,12 +8,9 @@ const CocktailLetter = () => {
 
   return (
     <div>
-      <h2
-        className="title"
-        style={{ fontSize: "40px", marginLeft: "5%", marginTop: "40px" }}
-      >
-        <span>Search By Letter</span>
-      </h2>
+      <h4 className="title" style={{ fontSize: "30px" ,marginLeft:'5%', marginTop: '30px'}}>
+          <span >Cocktail Letter</span>
+      </h4>
       <div className="lettersLink">
         {alphabet &&
           alphabet.map((letter,index) => {

@@ -31,11 +31,11 @@ const CocktailsByName = () => {
   
   return (
     <>
-      <h2 className="title" style={{ fontSize: "40px" ,marginLeft:'5%', marginTop: '30px'}}>
-        <span >Search By Cocktail Name</span>
-      </h2>
+      <h4 className="title" style={{ fontSize: "30px" ,marginLeft:'5%', marginTop: '30px'}}>
+          <span >Cocktail Name</span>
+      </h4>
 
-      <CocktailInput
+      <CocktailInput style={{ width: "40%"}}
         cocktailSelection={cocktailSelection}
         selectedCocktail={selectedCocktail}
         setSelectedCocktail={setSelectedCocktail}

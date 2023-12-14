@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const userTitle = styled.div`
+export const UserTitle = styled.div`
   font-size: 40px;
   position: relative;
   width: 100%;

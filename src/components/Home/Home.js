@@ -13,7 +13,7 @@ import { useState, useEffect } from "react";
 import { useContext } from "react";
 import { app } from "../../config/firebaseConfig";
 import { AuthContext } from "../../context/AuthContext";
-import {userTitle,Span} from './style.js';
+import {UserTitle,Span} from './style.js';
 
 function Home() {
   const [position, setPosition] = useState(0);
@@ -55,11 +55,11 @@ function Home() {
         </MDBCarouselItem>
       </MDBCarousel>
 
-      <userTitle>
-        <Span style={{ left: `${position}px` , marginTop:'800px'}}>
+      <UserTitle>
+        <Span style={{ left: `${position}px` , marginTop:'750px'}}>
           Welcome {user ? user.email : " Gast"} to Cocktail App
         </Span>
-      </userTitle>
+      </UserTitle>
 
       <div className="categorySection">
         <CocktailCategory />

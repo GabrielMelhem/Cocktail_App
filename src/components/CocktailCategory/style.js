@@ -5,6 +5,7 @@ export const CategorySection = styled.div`
   padding: 40px 0;
   overflow: hidden;
   background: #fff;
+  marginTop: 40px;
 `;
 export const CategoryTitle = styled.div`
   font-size: 40px;

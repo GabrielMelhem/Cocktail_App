@@ -12,7 +12,7 @@ import {
 import { Rating } from '@smastrom/react-rating'
 
 import '@smastrom/react-rating/style.css'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const DrinkCard = (drink) => {
   // const [currentTime, setCurrentTime] = useState(new Date());
